@@ -8,6 +8,11 @@ class HomeScreenController with ChangeNotifier {
   var output = "";
   String operand = "";
 
+  buttonpressed(String buttontext) {
+    if (buttontext == "AC") {
+    } else {}
+  }
+
   int count = 0;
   void Add() {
     input + output;

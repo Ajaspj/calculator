@@ -26,14 +26,14 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  "240 * 12",
+                  Providerobj.count.toString(),
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
                 SizedBox(
                   height: 10,
                 ),
                 Text(
-                  "2880",
+                  Providerobj.count.toString(),
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50),
                 ),
               ],
@@ -146,7 +146,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: GestureDetector(
                     child: Text("="),
-                    onTap: () {},
+                    onTap: () {
+                      Provider.of<HomeScreenController>(context, listen: false)
+                          .count();
+                      setState(() {});
+                    },
                   ),
                 ),
               ],
